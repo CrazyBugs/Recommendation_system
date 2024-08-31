@@ -3,10 +3,15 @@ import pandas as pd
 import marqo
 import streamlit as st
 from openai import OpenAI
-import os
+#import os
 
+<<<<<<< HEAD
 marqo_api_key_a = os.getenv(marqo_api_key)
 openai_api_key_a = os.getenv(openai_api_key)
+=======
+#marqo_api_key = os.getenv('MARQO_API_KEY')
+#openai_api_key = os.getenv('OPENAI_API_KEY')
+>>>>>>> 35a59ebccf4694fbc22a0d395c413138350e9381
 mq = marqo.Client(
     "https://api.marqo.ai",
     api_key=marqo_api_key_a
