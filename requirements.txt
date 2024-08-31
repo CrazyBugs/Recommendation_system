@@ -151,7 +151,6 @@ matplotlib-inline
 mccabe
 mdit-py-plugins
 mdurl
-mistune
 mkl-fft
 mkl-random
 mkl-service==2.4.0
