@@ -151,7 +151,6 @@ matplotlib-inline
 mccabe
 mdit-py-plugins
 mdurl
-menuinst
 mistune
 mkl-fft
 mkl-random
