@@ -5,13 +5,13 @@ import streamlit as st
 from openai import OpenAI
 import os
 
-marqo_api_key = os.getenv('MARQO_API_KEY')
-openai_api_key = os.getenv('OPENAI_API_KEY')
+marqo_api_key_a = os.getenv(marqo_api_key)
+openai_api_key_a = os.getenv(openai_api_key)
 mq = marqo.Client(
     "https://api.marqo.ai",
-    api_key=marqo_api_key
+    api_key=marqo_api_key_a
 )
-client = OpenAI(api_key=openai_api_key)
+client = OpenAI(api_key=openai_api_key_a)
 
 brands = ['Aqualogica','Aroma Magic','Beauty of Joseon','Be Bodywise','belif','Biore','Brinton','Cetaphil','Clinique','Colorbar','Conscious Chemist','Cos-IQ','COSRX','Dermalogica','Dot & Key',"Dr. Sheth's",'Earth Rhythm','Neutrogena','The Derma Co','Minimalist',"Re'equil",'Lotus Herbals','Biotique','Lakme','Plum','Wishcare','Fixderma','La Shield','Mamaearth','Lotus Professional','Foxtale','Lacto Calamine','SunScoop','Innisfree','Garnier','VLCC',"L'Oreal Paris",'ISDIN','Riyo Herbs','Ponds','Forest Essentials','NIVEA','Himalaya','Bioderma','Hyphen','Iba','Kaya Youth','Moha','WOW','Qurez','FAE Beauty','TNW The Natural Wash','Quench','Episoft','Sotrue','MCaffeine','Faces Canada','LANEIGE','Undry','Raaga Professional','O3+','Joy','Happier','Renee Cosmetics','Love Earth','Keya Seth','Moody','Thank You Farmer','Mountainor','Plix','Khadi Natural','Nirvasa','The Pink Foundry',"Cheryl's Cosmeceuticals",'Pilgrim','The Face Shop','Deconstruct','Ozone','ZM Zayn & Myza','Murad','Shiseido','Givenchy','Old School']
 metadata_filter="Vertical:(face wash) AND Budget:[* to 500] AND Brand_name IN ['Lakme','Mama Earth']"
