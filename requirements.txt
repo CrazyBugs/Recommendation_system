@@ -151,7 +151,6 @@ matplotlib-inline
 mccabe
 mdit-py-plugins
 mdurl
-mkl-fft
 mkl-random
 mkl-service==2.4.0
 more-itertools
