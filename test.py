@@ -145,6 +145,9 @@ def search_query_product(search_query):
     'Product Name': product_name,
     'Product Score': product_score
     })
+
+    if filter is None:
+    	filter = "No Filter"
     return Result, filter, query
 
 def main():
