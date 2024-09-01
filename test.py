@@ -130,10 +130,15 @@ def search_query_product(search_query):
     query = None
     while query is None:
         filter,query = get_parts_from_list(chat_comepletion(search_query))
-
-    results = mq.index("honestlysunscreen").search(
-        q=query, filter_string=filter
-    )
+    
+    if filter is None:
+    	results = mq.index("honestlysunscreen").search(
+        	q=query
+    	)
+    else:
+    	results = mq.index("honestlysunscreen").search(
+        	q=query, filter_string=filter
+    	)
     product_name = [ hit['Product_Name'] for hit in results['hits']]
     product_score =  [ hit['_score'] for hit in results['hits']]
     Result = pd.DataFrame({
