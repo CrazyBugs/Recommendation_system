@@ -128,7 +128,7 @@ def get_parts_from_list(input_list):
 def search_query_product(search_query):
     filter = None
     query = None
-    while filter is None or query is None:
+    while query is None:
         filter,query = get_parts_from_list(chat_comepletion(search_query))
 
     results = mq.index("honestlysunscreen").search(
